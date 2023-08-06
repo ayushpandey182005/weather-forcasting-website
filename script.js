@@ -38,7 +38,7 @@ const setWeatherDetails = (data) => {
 const callAPI = (id) => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${id}`)
         .then(response => {
-            // indicates whether the response is successful (status code 200-299) or not
+            
             if (!response.ok) {
                 alert("Check spelling of City and try again or Something Went Wrong!");
                 throw new Error(`Request failed with status ${response.status}`)
